@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>British Education School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for general layout */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-image: url('https://images.pexels.com/photos/1164572/pexels-photo-1164572.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: auto; /* Changed to auto for better mobile handling */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures full height */
+        }
+
+        /* Header styling */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px; /* Reduced font size for mobile */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px; /* Reduced margin for mobile */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main content section */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px;
+            flex-wrap: wrap; /* Added to wrap items on small screens */
+        }
+
+        .newsfeed, .activities {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            min-height: 300px;
+            transition: transform 0.2s;
+            margin: 10px; /* Margin for spacing */
+        }
+
+        .newsfeed h2, .activities h2 {
+            font-size: 24px; /* Adjusted font size */
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .newsfeed ul, .activities ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .newsfeed li, .activities li {
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .newsfeed li:hover, .activities li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .portal-section {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px; /* Reduced padding for mobile */
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        .portal-section h2 {
+            font-size: 24px; /* Adjusted font size */
+            margin-bottom: 20px;
+        }
+
+        .portal-section a {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 10px 20px; /* Reduced padding for mobile */
+            margin: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px; /* Adjusted font size */
+            transition: background 0.3s ease;
+        }
+
+        .portal-section a:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media queries for responsive design */
+        @media only screen and (max-width: 768px) {
+            .newsfeed, .activities {
+                width: 90%; /* Full width on mobile */
+                margin: 10px 0; /* Margin adjustments */
+            }
+
+            .portal-section {
+                width: 90%; /* Full width for portal section */
+                margin: 10px auto; /* Center the section */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>British Education School</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#portals">Portals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area for newsfeed and activities -->
+    <section class="content">
+        <div class="newsfeed">
+            <h2>Latest News</h2>
+            <ul>
+                <li onclick="alert('Term 2 starts on January 10th, 2024');">Term 2 starts on January 10th, 2024</li>
+                <li onclick="alert('Parent-Teacher Conferences are scheduled for November 12th');">Parent-Teacher Conferences are scheduled for November 12th</li>
+                <li onclick="alert('New extracurricular activities launched: Coding, Drama Club, and Swimming');">New extracurricular activities launched: Coding, Drama Club, and Swimming</li>
+                <li onclick="alert('Sports Day event successfully concluded on October 5th');">Sports Day event successfully concluded on October 5th</li>
+            </ul>
+        </div>
+
+        <div class="activities">
+            <h2>Upcoming Activities</h2>
+            <ul>
+                <li onclick="alert('October 15: Science Fair - Showcasing students\' science projects');">October 15: Science Fair - Showcasing students' science projects</li>
+                <li onclick="alert('October 20: Field Trip to the National Museum');">October 20: Field Trip to the National Museum</li>
+                <li onclick="alert('November 1: Annual School Talent Show');">November 1: Annual School Talent Show</li>
+                <li onclick="alert('December 18: Holiday Art Exhibition');">December 18: Holiday Art Exhibition</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section for Parents and Students Portal -->
+    <section class="portal-section" id="portals">
+        <h2>Welcome to the School Portal</h2>
+        <p>Select your portal below:</p>
+        <a href="#parents-login">Parents Portal</a>
+        <a href="#students-login">Students Portal</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 British Education School. All rights reserved.</p>
+    </footer>
+</body>
+</html>
